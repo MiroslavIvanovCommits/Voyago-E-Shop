@@ -1,0 +1,47 @@
+.footer-nav {
+	display: grid;
+	grid-template-areas: 'navigation navigation navigation navigation';
+	justify-content: space-evenly;
+	align-items: start;
+	min-height: 321px;
+}
+
+.footer-nav-list {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+.footer-nav-list li {
+	margin: 15px 0;
+}
+
+.footer-nav-list>li:nth-child(1)>p {
+	color: var(--black);
+}
+
+.footer-nav-list li a,
+.footer-nav-list li p {
+	padding: 0 18px;
+	display: block;
+	color: var(--white);
+	font-size: 16px;
+}
+
+.social-media-icons {
+	display: flex;
+}
+
+.payment-logo {
+	padding-left: 25px;
+}
+
+.payment-img {
+	width: 80px;
+	margin: -8px 0;
+}
+
+.k-appbar-light {
+	background-color: var(--primary);
+}

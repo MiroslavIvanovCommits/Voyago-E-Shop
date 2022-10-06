@@ -1,0 +1,15 @@
+<app-header [favoriteItems]="favItems" [cartItems]="cartItems"></app-header>
+
+<div class="products-wrapper">
+	<kendo-breadcrumb [items]="navigationItems" (itemClick)="redirectToHome($event)"></kendo-breadcrumb>
+	<div class="products">
+		<app-products-filter [showDiscounted]="showDiscounted" [showSize]="showSize"
+			[rating]="showRating" [color]="showColor" [price]="showPrice" [weight]="showWeight"
+			(onFiltersChange)="modelFilter($event)"></app-products-filter>
+		<app-product-card [items]="items" [filteredItems]="filteredItems" (onFavItemsChange)="favItems=$event"
+			(onCartItemsChange)="cartItems=$event">
+		</app-product-card>
+	</div>
+</div>
+
+<app-footer></app-footer>

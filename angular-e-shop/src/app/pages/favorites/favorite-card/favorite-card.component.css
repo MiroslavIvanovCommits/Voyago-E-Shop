@@ -1,0 +1,101 @@
+.favorite-card-h2 {
+	color: var(--base-text);
+}
+
+.favorite-card {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 24px;
+	gap: 40px;
+	height: 320px;
+	background: var(--white);
+	box-shadow: 0px 4px 24px rgba(123, 123, 123, 0.15);
+	border-radius: 10px;
+	margin-bottom: 24px;
+}
+
+.favorite-card-img {
+	width: 272px;
+	height: 272px;
+}
+
+.favorite-card-img-btn {
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.k-card-media {
+    max-width: none;
+}
+
+.k-card-actions {
+    padding: 0;
+    gap: 0;
+}
+
+.favorite-card-information {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.favorite-card-information-left {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.favorite-card-information-right {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.favorite-card-information-right h2 {
+	color: var(--primary);
+}
+
+.cart-btn {
+	padding: 8px 12px;
+	width: 260px;
+	height: 40px;
+	font-size: 16px;
+	margin: 16px 0;
+}
+
+.favorite-btn {
+	padding: 8px 12px;
+	width: 260px;
+	height: 40px;
+	font-size: 16px;
+}
+
+.favorite-card-stars {
+	display: flex;
+	align-items: center;
+	margin: 12px 0 22px 0;
+}
+
+.favorite-card-stars span {
+	color: var(--primary);
+}
+
+.favorite-card-stars p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: -0.9px;
+	color: var(--base-text);
+}
+
+.favorite-card-information-paragraph {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--base-text);
+	padding-right: 34%;
+}

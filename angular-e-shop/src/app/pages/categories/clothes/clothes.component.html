@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<kendo-breadcrumb class="clothes-breadcrumb" [items]="items" (itemClick)="redirectToHome()"></kendo-breadcrumb>
+<h1 class="clothes-h1">Clothes</h1>
+<div class="sub-categories">
+	<div class="sub-category">
+		<h3 class="clothes-h3">Jerseys</h3>
+		<button class="clothes-btn" (click)="loadItems('clothes', 'Jerseys')">
+			<img class="sub-category-img clothes-img" src="../../../../assets/images/Jersey.jpg" alt="Jersey">
+		</button>
+	</div>
+	<div class="sub-category">
+		<h3 class="clothes-h3">Shorts</h3>
+		<button class="clothes-btn" (click)="loadItems('clothes', 'Shorts')">
+			<img class="sub-category-img clothes-img" src="../../../../assets/images/Shorts.jpg" alt="Shorts">
+		</button>
+	</div>
+</div>
+
+<app-footer></app-footer>

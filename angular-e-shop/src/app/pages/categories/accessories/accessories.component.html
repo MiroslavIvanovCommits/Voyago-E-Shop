@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<kendo-breadcrumb class="accessories-breadcrumb" [items]="items" (itemClick)="redirectToHome()"></kendo-breadcrumb>
+<h1 class="accessories-h1">Accessories</h1>
+<div class="categories-first-row">
+	<div class="sub-category larger-img accessories-first-img">
+		<h3 class="accessories-h3">Bottles & Cages</h3>
+		<button class="accessories-btn" (click)="loadItems('accessories', 'Bottles and Cages')">
+			<img class="sub-category-img" src="../../../../assets/images/Bottle.jpg" alt="Bottles and Cages">
+		</button>
+	</div>
+	<div class="sub-category mini-img accessories-second-img">
+		<h3 class="accessories-h3">Lights</h3>
+		<button class="accessories-btn" (click)="loadItems('accessories', 'Lights')">
+			<img class="sub-category-img" src="../../../../assets/images/Light.jpg" alt="Lights">
+		</button>
+	</div>
+	<div class="sub-category mini-img accessories-third-img">
+		<h3 class="accessories-h3">Locks</h3>
+		<button class="accessories-btn" (click)="loadItems('accessories', 'Locks')">
+			<img class="sub-category-img" src="../../../../assets/images/Lock.jpg" alt="Locks">
+		</button>
+	</div>
+	<div class="sub-category smaller-img accessories-fourth-img">
+		<h3 class="accessories-h3">Tires and Tubes</h3>
+		<button class="accessories-btn" (click)="loadItems('accessories', 'Tires and Tubes')">
+			<img class="sub-category-img" src="../../../../assets/images/Tire.jpg" alt="Tires and Tubes">
+		</button>
+	</div>
+	<div class="sub-category larger-img accessories-fifth-img">
+		<h3 class="accessories-h3">Pumps</h3>
+		<button class="accessories-btn" (click)="loadItems('accessories', 'Pumps')">
+			<img class="sub-category-img" src="../../../../assets/images/Handlebar.jpg" alt="Pumps">
+		</button>
+	</div>
+</div>
+
+<app-footer></app-footer>

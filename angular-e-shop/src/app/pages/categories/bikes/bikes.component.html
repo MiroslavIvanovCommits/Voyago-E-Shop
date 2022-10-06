@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<kendo-breadcrumb class="bikes-breadcrumb" [items]="items" (itemClick)="redirectToHome()"></kendo-breadcrumb>
+<h1 class="bikes-h1">Bikes</h1>
+<div class="sub-categories">
+	<div class="sub-category">
+		<h3 class="bikes-h3">Mountain Bikes</h3>
+		<button class="bikes-btn" (click)="loadItems('bikes', 'Mountain Bikes')">
+			<img class="sub-category-img bikes-img" src="../../../../assets/images/Mountain Bike.jpg" alt="Mountain Bike">
+		</button>
+	</div>
+	<div class="sub-category">
+		<h3 class="bikes-h3">Road Bikes</h3>
+		<button class="bikes-btn" (click)="loadItems('bikes', 'Road Bikes')">
+			<img class="sub-category-img bikes-img" src="../../../../assets/images/Road Bike.jpg" alt="Road Bike">
+		</button>
+	</div>
+	<div class="sub-category">
+		<h3 class="bikes-h3">Touring Bikes</h3>
+		<button class="bikes-btn" (click)="loadItems('bikes', 'Touring Bikes')">
+			<img class="sub-category-img bikes-img" src="../../../../assets/images/Touring Bike.jpg" alt="Touring Bike">
+		</button>
+	</div>
+</div>
+
+<app-footer></app-footer>

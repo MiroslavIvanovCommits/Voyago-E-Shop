@@ -1,0 +1,80 @@
+<div class="product-card-wrapper">
+	<div class="products-card-header">
+		<h1>{{ subCategory }}</h1>
+
+		<div class="products-header-styling">
+			<kendo-dropdownlist class="sort-drop-down-list" [data]="listItems" [style.width.px]="174" rounded="small"
+				fillMode="outline" value="Sort by" #dropDownList (valueChange)="sortBy(this.dropDownList.value)">
+			</kendo-dropdownlist>
+
+			<kendo-buttongroup class="orientation-btns" selection="single">
+				<button class="activeView" kendoButton fillMode="clear" [selected]="true" [toggleable]="true"
+					(click)="toggleOrientation('horizontal', 'first')">
+					<span class="k-icon k-i-group"></span>
+				</button>
+				<button kendoButton fillMode="clear" [toggleable]="true"
+					(click)="toggleOrientation('vertical', 'second')">
+					<span class="k-icon k-i-list-bulleted"></span>
+				</button>
+			</kendo-buttongroup>
+		</div>
+	</div>
+
+	<kendo-stacklayout class="stack-layout" [gap]="40" [orientation]="orientation">
+
+		<h3 class="no-products-message" *ngIf="total < 1">No products found</h3>
+
+		<kendo-card class="product-card-card" [style.width.px]="orientation === 'horizontal' ? 330 : 1070"
+			[class]="orientation === 'horizontal' ? 'horizontal-product-card' : 'vertical-product-card'"
+			*ngFor="let card of pagedProducts; let i = index">
+
+			<div [class]="orientation === 'horizontal' ? 'horizontal-product-card-img' : 'vertical-product-card-img' ">
+				<button class="picture-btn" (click)="viewDetails(card)">
+					<kendo-badge-container>
+						<img kendoCardMedia src="{{ card.url }}" alt="{{ card.title }}">
+						<kendo-badge *ngIf="card.discountedPercents > 0" class="discount-badge" size="large">
+							-{{ card.discountedPercents }}%</kendo-badge>
+					</kendo-badge-container>
+				</button>
+			</div>
+
+			<kendo-card-body class="horizontal-product-card-information" *ngIf="orientation === 'horizontal'">
+				<h3>{{ card.title }}</h3>
+				<div class="stars"><span class="k-icon k-i-star"></span>
+					<p><b>{{ card.stars }}</b> / 5</p>
+				</div>
+				<h2>{{ card. price | currency}}</h2>
+				<kendo-card-actions class="horizontal-product-card-buttons">
+					<button class="cart-btn k-button-primary" kendoButton themeColor="none" icon="cart"
+						(click)="updateCartStatus(card, i)">Add to cart</button>
+					<button class="favorite-btn k-button-secondary" kendoButton themeColor="none"
+						icon="favorite-outline" (click)="updateFavoriteStatus(card, orientation, i)"></button>
+				</kendo-card-actions>
+			</kendo-card-body>
+
+			<div class="vertical-product-card-information" *ngIf="orientation === 'vertical'">
+				<div class="vertical-product-card-information-left">
+					<h2>{{ card.title }}</h2>
+					<div class="stars"><span class="k-icon k-i-star"></span>
+						<p><b>{{ card.stars }}</b> / 5</p>
+					</div>
+					<p class="vertical-product-card-information-paragraph">{{ card.description }}</p>
+				</div>
+				<kendo-card-actions class="vertical-product-card-information-right">
+					<h2>{{ card. price | currency}}</h2>
+					<button class="cart-btn k-button-primary" kendoButton themeColor="none" icon="cart"
+						(click)="updateCartStatus(card, i)">Add to cart</button>
+					<button class="favorite-btn k-button-secondary" kendoButton themeColor="none"
+						icon="favorite-outline" (click)="updateFavoriteStatus(card, orientation, i)">Add to
+						favorites</button>
+				</kendo-card-actions>
+			</div>
+
+		</kendo-card>
+
+	</kendo-stacklayout>
+
+	<kendo-datapager class="pager" [pageSize]="pageSize" [pageSizeValues]="[5, 10, 12, 20]" [skip]="skip"
+		[total]="total" (pageChange)="onPageChange($event)">
+	</kendo-datapager>
+</div>

@@ -1,0 +1,7 @@
+<app-header [favoriteItems]="favItems" [cartItems]="cartItems"></app-header>
+
+<h1 class="favorites-h1">Favorites</h1>
+<h3 class="favorites-h3" *ngIf="favItems < 1">There aren't any favorite items saved</h3>
+<a class="favorites-a" routerLink="/products">Continue shopping</a>
+<app-favorite-card class="favorite-cards" (onFavItemsChange)="favItems=$event" (onCartItemsChange)="cartItems=$event">
+</app-favorite-card>

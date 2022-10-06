@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+<kendo-breadcrumb class="components-breadcrumb" [items]="items" (itemClick)="redirectToHome()"></kendo-breadcrumb>
+<h1 class="components-h1">Components</h1>
+<div class="categories-first-row">
+	<div class="sub-category larger-img components-first-img">
+		<h3 class="components-h3">Chains</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Chains')">
+			<img class="sub-category-img" src="../../../../assets/images/Chains.jpg" alt="Chains">
+		</button>
+	</div>
+	<div class="sub-category mini-img components-second-img">
+		<h3 class="components-h3">Derailleurs</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Derailleurs')">
+			<img class="sub-category-img" src="../../../../assets/images/Derailleurs.jpg" alt="Derailleurs">
+		</button>
+	</div>
+	<div class="sub-category mini-img components-third-img">
+		<h3 class="components-h3">Forks</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Forks')">
+			<img class="sub-category-img" src="../../../../assets/images/Forks.jpg" alt="Forks">
+		</button>
+	</div>
+	<div class="sub-category smaller-img components-fourth-img">
+		<h3 class="components-h3">Mountain Frames</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Mountain Frames')">
+			<img class="sub-category-img" src="../../../../assets/images/Mountain Frame.jpg" alt="Mountain Frames">
+		</button>
+	</div>
+	<div class="sub-category larger-img components-fifth-img">
+		<h3 class="components-h3">Handlebars</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Handlebars')">
+			<img class="sub-category-img" src="../../../../assets/images/Handlebar.jpg" alt="Handlebars">
+		</button>
+	</div>
+</div>
+
+<div class="categories-second-row">
+	<div class="sub-category mini-img">
+		<h3 class="components-h3">Pedals</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Pedals')">
+			<img class="sub-category-img" src="../../../../assets/images/Pedal.jpg" alt="Pedals">
+		</button>
+	</div>
+	<div class="sub-category smaller-img">
+		<h3 class="components-h3">Saddles</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Saddles')">
+			<img class="sub-category-img" src="../../../../assets/images/Saddle.jpg" alt="Saddles">
+		</button>
+	</div>
+	<div class="sub-category smaller-img">
+		<h3 class="components-h3">Touring Frames</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Touring Frames')">
+			<img class="sub-category-img" src="../../../../assets/images/Touring Frame.jpg" alt="Touring Frames">
+		</button>
+	</div>
+	<div class="sub-category mini-img">
+		<h3 class="components-h3">Wheels</h3>
+		<button class="components-btn" (click)="loadItems('components', 'Wheels')">
+			<img class="sub-category-img" src="../../../../assets/images/Wheel.jpg" alt="Wheels">
+		</button>
+	</div>
+</div>
+
+<app-footer></app-footer>

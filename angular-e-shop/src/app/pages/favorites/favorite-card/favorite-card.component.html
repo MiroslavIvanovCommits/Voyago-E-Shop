@@ -1,0 +1,26 @@
+<kendo-card width="1070px" class="favorite-card" *ngFor="let card of items; let i = index">
+
+	<div>
+		<button class="favorite-card-img-btn">
+			<img class="favorite-card-img" kendoCardMedia src="{{ card.url }}" alt="{{ card.title }}">
+		</button>
+	</div>
+
+	<div class="favorite-card-information">
+		<div class="favorite-card-information-left">
+			<h2 class="favorite-card-h2">{{ card.title }}</h2>
+			<div class="favorite-card-stars"><span class="k-icon k-i-star"></span>
+				<p><b>{{ card.stars }}</b> / 5</p>
+			</div>
+			<p class="favorite-card-information-paragraph">{{ card.description }}</p>
+		</div>
+		<kendo-card-actions class="favorite-card-information-right">
+			<h2 class="favorite-card-h2">{{ card. price | currency}}</h2>
+			<button class="cart-btn k-button-primary" kendoButton themeColor="none" icon="cart"
+				(click)="updateCartStatus(card, i)">Add to cart</button>
+			<button class="favorite-btn k-button-secondary" kendoButton themeColor="none" icon="favorite"
+				(click)="updateFavoriteStatus(card, i)">Remove from favorites</button>
+		</kendo-card-actions>
+	</div>
+
+</kendo-card>

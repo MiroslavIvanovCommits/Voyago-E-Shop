@@ -1,0 +1,14 @@
+:root {
+	--primary: #4AA675;
+	--button-text: #272727;
+	--base-text: #1D252C;
+	--secondary-text: #818181;
+	--black: #000000;
+	--white: #FFFFFF;
+	--button-hover: linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)), #4AA675;
+	--button-active: linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), #4AA675;
+	--button-selected: linear-gradient(0deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.24)), #4AA675;
+	--input-border: #898989;
+	--separator: #E5E5E5;
+	--pane-background: #F2F2F2;
+}

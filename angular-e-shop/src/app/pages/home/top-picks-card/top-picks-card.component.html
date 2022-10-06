@@ -1,0 +1,16 @@
+<div class="top-picks-card-wrapper">
+	<button class="arrow"><i class="left-arrow"></i></button>
+	<kendo-card width="296.5px" class="top-picks-card" *ngFor="let card of visible">
+
+		<kendo-card-header class="top-picks-card-title">
+			<h3 class="top-picks-card-h3">{{ card.title }}</h3>
+		</kendo-card-header>
+
+		<div class="top-picks-card-img">
+			<button class="top-picks-card-picture-btn" (click)="viewDetails(card)">
+				<img kendoCardMedia src="{{ card.url }}" alt="{{ card.title }}">
+			</button>
+		</div>
+	</kendo-card>
+	<p class="arrow"><i class="right-arrow"></i></p>
+</div>

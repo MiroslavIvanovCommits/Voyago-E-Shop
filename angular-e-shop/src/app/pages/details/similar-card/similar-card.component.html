@@ -1,0 +1,23 @@
+<h2 class="similar-card-header">Similar Products</h2>
+
+<div class="similar-card-wrapper">
+	<kendo-card width="330px" class="details-card" *ngFor="let card of items; let i = index">
+
+		<div>
+			<a href="#">
+				<img class="details-card-img" kendoCardMedia src="{{ card.url }}" alt="{{ card.title }}">
+			</a>
+		</div>
+
+		<kendo-card-body class="details-card-information">
+			<h3 class="similar-card-h3">{{ card.title }}</h3>
+			<h2 class="similar-card-h2">{{ card. price | currency}}</h2>
+			<kendo-card-actions class="details-card-buttons">
+				<button class="cart-btn k-button-primary" kendoButton themeColor="none" icon="cart"
+					(click)="updateCartStatus(card, i)">Add to cart</button>
+				<button class="favorite-btn k-button-secondary" kendoButton themeColor="none" icon="favorite-outline"
+					(click)="updateFavoriteStatus(card, i)"></button>
+			</kendo-card-actions>
+		</kendo-card-body>
+	</kendo-card>
+</div>

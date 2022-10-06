@@ -1,0 +1,33 @@
+.bikes-h1 {
+	padding: 1% 0 1% 12%;
+	margin-bottom: 24px;
+}
+
+.bikes-h3 {
+	color: var(--base-text);
+	margin-left: 16px;
+	margin-bottom: 6px;
+}
+
+.bikes-btn {
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.sub-categories {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+	gap: 40px;
+}
+
+.bikes-img {
+	width: 456px;
+	height: 484px;
+	border-radius: 0 0 10px 10px;
+}
+
+.bikes-breadcrumb {
+	margin-left: 12%;
+}

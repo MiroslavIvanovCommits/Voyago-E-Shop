@@ -1,0 +1,94 @@
+<div class="products-filter-wrapper">
+	<h4 class="products-filter-h4">Filters</h4>
+
+	<div class="filter-card">
+		<p>Clear All</p>
+		<button (click)="uncheckAll()" kendoButton><span class="k-icon k-i-close"></span></button>
+	</div>
+
+	<div *ngIf="showDiscounted" class="filter-card">
+		<p>Show</p>
+		<div class="input-item">
+			<input id="showAll" type="radio" name="vgz" #all kendoCheckBox checked (change)="onChange()" />
+			<kendo-label class="k-checkbox-label" [for]="all" text="All"></kendo-label>
+		</div>
+		<div class="filter-item">
+			<input id="showDiscounted" type="radio" name="vgz" #discounted kendoCheckBox (change)="onChange()" />
+			<kendo-label class="k-checkbox-label" [for]="discounted" text="Discounted items only"></kendo-label>
+		</div>
+	</div>
+
+	<div class="filter-card">
+		<p>Model</p>
+		<div *ngFor="let item of modelsDataList">
+			<div class="input-item">
+				<input type="checkbox" name="{{item.model}}" kendoCheckBox [(ngModel)]="item.isChecked"
+					(change)="onChange()" />
+				<kendo-label class="k-checkbox-label" text="{{item.model}}"></kendo-label>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="showSize" class="filter-card">
+		<p>Size</p>
+		<div *ngFor="let item of sizesDataList">
+			<div class="input-item">
+				<input type="checkbox" name="{{item.size}}" kendoCheckBox [(ngModel)]="item.isChecked"
+					(change)="onChange()" />
+				<kendo-label class=" k-checkbox-label" text="{{item.size}}"></kendo-label>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="rating" class="filter-card">
+		<p>Rating</p>
+		<div *ngFor="let item of ratingsDataList">
+			<div class="input-item">
+				<input type="checkbox" name="{{item.stars}}" kendoCheckBox [(ngModel)]="item.isChecked"
+					(change)="onChange()" />
+				<kendo-label class="k-checkbox-label" text="{{item.stars}} stars"></kendo-label>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="color" class="filter-card">
+		<p>Color</p>
+		<div *ngFor="let item of colorsDataList">
+			<div class="input-item">
+				<input type="checkbox" name="{{item.color}}" kendoCheckBox [(ngModel)]="item.isChecked"
+					(change)="onChange()" />
+				<kendo-label class="k-checkbox-label" text="{{item.color}}"></kendo-label>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="price" class="filter-card">
+		<p>Price</p>
+		<kendo-rangeslider [min]="0" [max]="2000" [smallStep]="100" [largeStep]="5">
+		</kendo-rangeslider>
+		<div class="price-range">
+			<kendo-numerictextbox class="numericTextBox" #priceFrom [style.width.px]="110" [spinners]="false"
+				[step]="100" [decimals]="0" format="n0" [min]="20" [max]="2000">
+			</kendo-numerictextbox>
+			<p>-</p>
+			<kendo-numerictextbox class="numericTextBox" #priceTo [style.width.px]="110" [spinners]="false" [step]="100"
+				[decimals]="0" format="n0" [min]="20" [max]="2000">
+			</kendo-numerictextbox>
+		</div>
+	</div>
+
+	<div *ngIf="weight" class="filter-card">
+		<p>Weight</p>
+		<kendo-rangeslider [min]="20" [max]="50" [smallStep]="1" [largeStep]="5">
+		</kendo-rangeslider>
+		<div class="weight-range">
+			<kendo-numerictextbox class="numericTextBox" #weightFrom [style.width.px]="110" [spinners]="false"
+				[step]="1" [decimals]="0" format="n0" [min]="20" [max]="50">
+			</kendo-numerictextbox>
+			<p>-</p>
+			<kendo-numerictextbox class="numericTextBox" #weightТо [style.width.px]="110" [spinners]="false" [step]="1"
+				[decimals]="0" format="n0" [min]="20" [max]="50">
+			</kendo-numerictextbox>
+		</div>
+	</div>
+</div>

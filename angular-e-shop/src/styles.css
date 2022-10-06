@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	object-fit: cover;
+}
+
+.category,
+.sub-category {
+	transition: transform 0.2s ease-in;
+}
+
+.category:hover,
+.sub-category:hover {
+	transform: scale(1.05);
+}
+
+.category-img,
+.sub-category-img {
+	transition: all 0.2s ease-in;
+}
+
+.category-img:hover,
+.sub-category-img:hover {
+	border-radius: 10px !important;
+}

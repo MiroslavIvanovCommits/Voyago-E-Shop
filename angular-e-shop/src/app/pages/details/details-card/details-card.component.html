@@ -1,0 +1,50 @@
+<div class="details-card-wrapper">
+	<img class="details-card-img" kendoCardMedia src="{{product.url}}" alt="">
+
+	<div class="details-information">
+
+		<div class="details-card-top-part">
+			<h1>{{product.model}}</h1>
+			<div *ngIf="showRating" class="details-card-stars">
+				<p><span class="k-icon k-i-star"></span> {{product.stars}}</p>
+			</div>
+		</div>
+
+		<div class="details-card-bottom-part">
+			<div class="details-card-bottom-left-part">
+				<div class="product-name">
+					<p class="bolded-text">Product Name</p>
+					<p>{{product.title}}</p>
+				</div>
+				<div *ngIf="showNumber" class="product-number">
+					<p class="bolded-text">Product No</p>
+					<p>{{product.number}}</p>
+				</div>
+				<div *ngIf="showSize" class="product-size">
+					<p class="bolded-text">Size</p>
+					<p>{{product.size}}</p>
+				</div>
+				<div *ngIf="showWeight" class="product-weight">
+					<p class="bolded-text">Weight</p>
+					<p>{{product.weight}}</p>
+				</div>
+				<div *ngIf="showColor" class="product-color">
+					<p class="bolded-text">Color</p>
+					<p>{{product.color}}</p>
+				</div>
+				<div class="product-description">
+					<p class="bolded-text">Description</p>
+					<p>{{product.description}}</p>
+				</div>
+			</div>
+
+			<div class="details-card-bottom-right-part">
+				<h1 class="details-card-price">{{product.price | currency}}</h1>
+				<button class="cart-btn k-button-primary" kendoButton themeColor="none" icon="cart"
+					(click)="updateCartStatus(product)">Add to cart</button>
+				<button class="favorite-btn k-button-secondary" kendoButton themeColor="none" icon="favorite-outline"
+					(click)="updateFavoriteStatus(product)">Add to favorites</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="recently-viewed-card-wrapper">
+	<kendo-card width="330px" class="recently-viewed-card" *ngFor="let card of items; let i = index">
+
+		<div class="recently-viewed-card-img">
+			<button class="recently-viewed-card-picture-btn" (click)="viewDetails(card)">
+				<img kendoCardMedia src="{{ card.url }}" alt="{{ card.title }}">
+			</button>
+		</div>
+
+		<kendo-card-body class="recently-viewed-card-information">
+			<h3 class="recently-viewed-card-h3">{{ card.title }}</h3>
+			<h2 class="recently-viewed-card-h2">{{ card. price | currency}}</h2>
+			<kendo-card-actions class="recently-viewed-card-buttons">
+				<button class="cart-btn k-button-primary" kendoButton themeColor="none" icon="cart"
+					(click)="updateCartStatus(card, i)">Add to cart</button>
+				<button class="favorite-btn k-button-secondary" kendoButton themeColor="none" icon="favorite-outline"
+					(click)="updateFavoriteStatus(card, i)"></button>
+			</kendo-card-actions>
+		</kendo-card-body>
+	</kendo-card>
+</div>

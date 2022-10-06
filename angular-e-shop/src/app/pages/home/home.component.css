@@ -1,0 +1,115 @@
+.demo-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 15px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	font-size: 24px;
+}
+
+.carousel {
+	border: 0;
+}
+
+.top-picks {
+	min-height: 480px;
+	background-color: #4AA67533;
+}
+
+.top-picks-card-title {
+	font-size: 80px;
+}
+
+.home-h1 {
+	padding: 1% 0 1% 12%;
+}
+
+.home-h3 {
+	color: var(--base-text);
+	margin-left: 16px;
+	margin-bottom: 6px;
+}
+
+.larger-img img {
+	width: 453px;
+	height: 484px;
+	border-radius: 0 0 10px 10px;
+}
+
+.smaller-img img {
+	width: 454px;
+	height: 200px;
+	border-radius: 0 0 10px 10px;
+}
+
+.home-first-img {
+	grid-area: first-img;
+	margin-right: 40px;
+}
+
+.home-second-img {
+	grid-area: second-img;
+	margin-bottom: 45px;
+}
+
+.home-third-img {
+	grid-area: third-img;
+}
+
+.home-fourth-img {
+	grid-area: fourth-img;
+	margin-left: 40px;
+}
+
+.home-sub-categories {
+	display: grid;
+	grid-template-areas:
+		'first-img second-img fourth-img'
+		'first-img third-img fourth-img';
+	justify-content: center;
+}
+
+.download-application {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 80px 0;
+}
+
+.download-paragraph {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 58px;
+	letter-spacing: -0.9px;
+	color: var(--button-text);
+	margin-right: 64px;
+}
+
+.google-play {
+	margin-right: 24px;
+}
+
+.app-store {
+	margin-right: 6%;
+}
+
+.recently-viewed {
+	margin-bottom: 16px;
+}
+
+.horizontal-line {
+	border: 1px solid #E5E5E5;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.carousel-img {
+	position: relative;
+	width: 100%;
+	top: -450px;
+}

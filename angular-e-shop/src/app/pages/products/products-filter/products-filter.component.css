@@ -1,0 +1,65 @@
+.products-filter-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	margin-top: 18px;
+	padding-bottom: 26px;
+	width: 330px;
+	border-radius: 10px;
+	background: var(--pane-background);
+}
+
+.products-filter-h4 {
+	position: absolute;
+	left: 24px;
+	top: 24px;
+}
+
+.filter-card {
+	display: flex;
+	flex-direction: column;
+	width: 280px;
+	margin-top: 24px;
+	padding: 28px 0 20px 16px;
+	border-radius: 10px;
+	color: var(--base-text);
+	background: var(--white);
+}
+
+.filter-card div:first-of-type {
+	margin-top: 8px;
+}
+
+.filter-card p:first-of-type {
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+.filter-card:first-of-type {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 92px;
+	padding-bottom: 28px;
+	padding-right: 26px;
+}
+
+.filter-card:first-of-type p {
+	margin-bottom: 0;
+}
+
+.filter-card:first-of-type button {
+	border: none;
+	background: transparent;
+	padding: 0;
+}
+
+.price-range,
+.weight-range {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 63px;
+	margin-right: 16px;
+}

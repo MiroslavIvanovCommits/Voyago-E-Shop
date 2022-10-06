@@ -1,0 +1,75 @@
+<app-header></app-header>
+
+<div class="contacts-wrapper">
+	<h1 class="contacts-h1">Contacts</h1>
+
+	<form class="k-form" [formGroup]="contactForm">
+
+		<fieldset class="k-form-fieldset">
+
+			<kendo-formfield class="form-field">
+				<kendo-label class="form-label" [for]="name" text="Name"></kendo-label>
+				<input formControlName="name" kendoTextBox #name required />
+
+				<kendo-formerror>Error: Name is required</kendo-formerror>
+			</kendo-formfield>
+
+			<kendo-formfield class="form-field">
+				<kendo-label class="form-label" [for]="email" text="Email"></kendo-label>
+				<input type="email" formControlName="email" kendoTextBox #email required />
+
+				<kendo-formerror>Error: Please enter a valid email</kendo-formerror>
+			</kendo-formfield>
+
+			<kendo-formfield class="form-field">
+				<kendo-label class="form-label" [for]="message" text="Message"></kendo-label>
+				<kendo-textarea [rows]="4" resizable="vertical" formControlName="message" kendoTextBox #message
+					required>
+				</kendo-textarea>
+
+				<kendo-formerror>Error: Your message must be at least 40 symbols long</kendo-formerror>
+			</kendo-formfield>
+
+			<div class="validation-wrapper">
+				<kendo-formfield class="form-field">
+					<kendo-label class="form-label" [for]="validation" text="Anti-bot validation"></kendo-label>
+					<input class="input-validation" formControlName="validation" kendoTextBox #validation required />
+
+					<kendo-formhint>Type the characters you see in the picture above.</kendo-formhint>
+					<kendo-formerror>Error: Incorrect validation</kendo-formerror>
+				</kendo-formfield>
+
+				<span class="k-icon k-i-reload"></span>
+
+				<div class="k-form-buttons">
+					<button kendoButton class="k-button-primary" themeColor="none"
+						(click)="submitForm()">Submit</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+	<div class="map">
+		<p class="contacts-p">United States<br />
+			932 Clousson Road Str<br />
+			Sergeant Bluff, Iowa<br />
+			712-923-1916<br />
+			51054United States<br />
+			932 Clousson Road Str<br />
+			Sergeant Bluff, Iowa<br />
+			712-923-1916<br />
+			51054</p>
+		<div class="kendo-map">
+			<kendo-map [center]="center" [zoom]="15">
+				<kendo-map-layers>
+					<kendo-map-tile-layer [subdomains]="tileSubdomains" [urlTemplate]="tileUrl">
+					</kendo-map-tile-layer>
+					<kendo-map-marker-layer [data]="markers" locationField="latlng" titleField="name">
+					</kendo-map-marker-layer>
+				</kendo-map-layers>
+			</kendo-map>
+		</div>
+	</div>
+</div>
+
+<app-footer></app-footer>

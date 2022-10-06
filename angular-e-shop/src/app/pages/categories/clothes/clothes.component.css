@@ -1,0 +1,33 @@
+.clothes-h1 {
+	padding: 1% 0 1% 12%;
+	margin-bottom: 24px;
+}
+
+.clothes-h3 {
+	color: var(--base-text);
+	margin-left: 16px;
+	margin-bottom: 6px;
+}
+
+.clothes-btn {
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.sub-categories {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+	gap: 40px;
+}
+
+.clothes-img {
+	width: 700px;
+	height: 484px;
+	border-radius: 0 0 10px 10px;
+}
+
+.clothes-breadcrumb {
+	margin-left: 12%;
+}

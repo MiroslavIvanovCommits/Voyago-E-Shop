@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 57.6px;
+    line-height: 58px;
+    letter-spacing: -0.9px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 46px;
+    letter-spacing: -0.9px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28.8px;
+
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27.6px;
+    letter-spacing: 0.1px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.k-button {
+	font-weight: 500;
+	line-height: 24px;
+}

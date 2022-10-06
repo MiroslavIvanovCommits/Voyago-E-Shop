@@ -1,0 +1,62 @@
+.top-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 114px;
+	margin: 0 10%;
+}
+
+.logo-and-search {
+	display: flex;
+	align-items: center;
+}
+
+.top-header-search-bar {
+	margin-left: 40px;
+}
+
+.top-header-nav-list {
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+}
+
+.top-header-nav-list li a,
+.log-out-btn {
+	padding: 0 18px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--base-text);
+}
+
+.top-header-nav-list li kendo-dropdownlist {
+	padding-left: 30px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--base-text);
+}
+
+.k-appbar-light {
+	background-color: var(--white);
+}
+
+.favorites-badge {
+	margin-right: 10px;
+}
+
+.log-out-btn {
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+@media (max-width: 1810px) {
+	.top-header-search-bar-field {
+		max-width: 400px;
+	}
+}

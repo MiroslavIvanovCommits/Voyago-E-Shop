@@ -1,0 +1,47 @@
+.login-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: translate(0%, 45%);
+}
+
+.k-form {
+	width: 420px;
+}
+
+.logo {
+	margin-bottom: 3%;
+}
+
+.form-field {
+	height: 48px;
+	margin: 14% 0;
+}
+
+.form-label {
+	padding-bottom: 2%;
+}
+
+.k-input {
+	height: 48px;
+}
+
+.k-form-buttons button {
+	width: 100%;
+	height: 48px;
+	margin-top: 15%;
+}
+
+.login-message {
+	display: flex;
+	margin-top: 3%;
+}
+
+.login-message p {
+	margin-right: 6px;
+}
+
+.lost-password a,
+.login-message a {
+	color: var(--primary);
+}

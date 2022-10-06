@@ -1,0 +1,75 @@
+.contacts-wrapper {
+	display: flex;
+	width: 946px;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.contacts-h1 {
+	text-align: center;
+	color: var(--black);
+}
+
+.contacts-p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--base-text);
+	width: 206px;
+	margin-right: 40px;
+}
+
+.k-form-fieldset {
+	margin-bottom: 100px;
+}
+
+.k-form-buttons button {
+	padding: 12px;
+	width: 207px;
+	height: 48px;
+	font-size: 20px;
+}
+
+.form-label {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0.1px;
+	color: var(--black);
+}
+
+.map {
+	display: flex;
+	margin-bottom: 80px;
+	margin-right: -80px;
+}
+
+.kendo-map {
+	width: 700px;
+	height: 336px;
+}
+
+.form-label {
+	margin-bottom: 11.5px;
+}
+
+.form-field input {
+	height: 48px;
+}
+
+.input-validation {
+	width: 190px;
+}
+
+.validation-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.validation-wrapper span {
+	top: 15px;
+	left: -270px;
+}

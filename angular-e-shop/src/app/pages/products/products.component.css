@@ -1,0 +1,8 @@
+.products-wrapper {
+	margin: 70px 240px 0 240px;
+}
+
+.products {
+	display: flex;
+	gap: 40px;
+}

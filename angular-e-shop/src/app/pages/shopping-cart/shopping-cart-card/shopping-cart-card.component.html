@@ -1,0 +1,43 @@
+<ul class="shopping-cart-card-ul">
+	<li class="bigger-li">
+		<p>Product</p>
+	</li>
+	<li class="smaller-li">
+		<p>Price</p>
+	</li>
+	<li class="smaller-li">
+		<p>Quantity</p>
+	</li>
+	<li class="smaller-li right-text">
+		<p>Total</p>
+	</li>
+</ul>
+
+<div class="shopping-cart-card-wrapper">
+	<kendo-card orientation="horizontal" width="1200px" class="shopping-cart-card" *ngFor="let card of items; let i = index">
+
+		<div>
+			<img class="shopping-cart-card-img" kendoCardMedia src="{{ card.url }}" alt="{{ card.title }}">
+		</div>
+
+		<kendo-card-body class="shopping-cart-card-body">
+			<h3 class="card-title">{{ card.title }}</h3>
+			<h4 class="card-price">{{ card.price | currency }}</h4>
+			<div class="item-quantity">
+				<button kendoButton class="minus-btn" themeColor="none" (click)="subtractOne(this.card)">
+					<span class="k-icon k-i-minus"></span>
+				</button>
+				<kendo-numerictextbox class="numeric-input" [style.width.px]="38" [style.height.px]="34" rounded="none"
+					[spinners]="false" [step]="1" [value]=card.quantity! [min]="1" [autoCorrect]="true" [decimals]="0"
+					[changeValueOnScroll]="false" [readonly]="true" format="n0">
+				</kendo-numerictextbox>
+				<button kendoButton class="plus-btn" themeColor="none" (click)="addOne(this.card)">
+					<span class="k-icon k-i-plus"></span>
+				</button>
+			</div>
+			<h4 class="card-total"> {{ itemPrice(card) | currency }}</h4>
+			<button class="remove-btn" (click)="removeCard(this.card, i)">Remove</button>
+		</kendo-card-body>
+
+	</kendo-card>
+</div>
